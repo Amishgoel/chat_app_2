@@ -15,7 +15,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cookieParser());
 const corsOption={
-    origin:'https://chat-app-2-frontend.onrender.com/',
+    origin:'https://chat-app-2-frontend.onrender.com',
     credentials:true,
 
 };
