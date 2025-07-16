@@ -11,7 +11,10 @@ const useGetMessages = () => {
         const fetchMessages = async () => {
          try{
             axios.defaults.withCredentials = true;
-            const res= await axios.get(`https://chat-app-backend-cod3.onrender.com/api/v1/message/${selectedUser?._id}`) ;
+            const res= await axios.get(`https://chat-app-backend-cod3.onrender.com/api/v1/message/${selectedUser?._id}`
+                                      {
+            withCredentials: true, 
+          }) ;
             console.log(res);
             dispatch(setMessages(res.data));
          }
